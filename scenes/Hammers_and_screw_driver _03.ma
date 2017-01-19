@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
-//Name: Hammers_and_screw_driver _02.ma
-//Last modified: Thu, Jan 19, 2017 03:42:17 PM
+//Name: Hammers_and_screw_driver _03.ma
+//Last modified: Thu, Jan 19, 2017 03:43:12 PM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l inch -a degree -t film;
@@ -88,12 +88,12 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "group1";
+createNode transform -n "HammerGroup";
 	rename -uid "C62B2C1F-4F4F-62C0-EAFE-77B2915CA194";
 	setAttr ".t" -type "double3" 128.89671359277227 0 152.16643471174484 ;
 createNode transform -n "HammerHead";
 	rename -uid "2BD067FD-5B4E-F6E5-41BC-24809171D429";
-	setAttr ".t" -type "double3" 6.5402284248357363 -0.11603242144946586 0 ;
+	setAttr ".t" -type "double3" 6.5402284248357363 1.1482824970422838 0 ;
 	setAttr ".s" -type "double3" 2.0099256433775157 2.0407150036113237 3.957600696013758 ;
 createNode mesh -n "HammerHeadShape" -p "HammerHead";
 	rename -uid "B307ADEE-3B43-A516-D8A1-14AB608E7EE0";
@@ -356,4 +356,4 @@ connectAttr "HammerHandleShape.wm" "polyBevel2.mp";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "HammerHeadShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "HammerHandleShape.iog" ":initialShadingGroup.dsm" -na;
-// End of Hammers_and_screw_driver _02.ma
+// End of Hammers_and_screw_driver _03.ma
