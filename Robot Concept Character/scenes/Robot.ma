@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Robot.ma
-//Last modified: Tue, Feb 07, 2017 03:34:52 PM
+//Last modified: Tue, Feb 07, 2017 03:49:43 PM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -101,25 +101,10 @@ createNode imagePlane -n "imagePlaneShape2" -p "imagePlane2";
 	setAttr ".w" 2.16;
 	setAttr ".h" 4.48;
 	setAttr ".cs" -type "string" "sRGB";
-createNode transform -n "Torso";
-	rename -uid "8375A119-9549-4883-94F3-8B9B0178AB55";
-	setAttr ".t" -type "double3" 0 3.0610815043331883 0 ;
-	setAttr ".s" -type "double3" 2.4777777653924882 1.2888888864677035 1 ;
-createNode mesh -n "TorsoShape" -p "Torso";
-	rename -uid "479769E0-474E-405B-A430-AE8D762E0E24";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "Head";
 	rename -uid "B8FDBBE7-9B4C-4BD0-8793-BD92FBF378A6";
 	setAttr ".t" -type "double3" -0.061018235966775025 3.620415334028622 0 ;
-	setAttr ".s" -type "double3" 0.67119698036499509 0.67119698036499509 0.67119698036499509 ;
+	setAttr ".s" -type "double3" 0.67119698036499509 0.6711969803649952 0.67119698036499509 ;
 createNode mesh -n "HeadShape" -p "Head";
 	rename -uid "AF8CBBB3-3C49-CA4A-EF5F-8DAECA5DDD3A";
 	setAttr -k off ".v";
@@ -131,25 +116,12 @@ createNode mesh -n "HeadShape" -p "Head";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "RightArmShoulder";
-	rename -uid "C6E17999-D444-0151-703F-359B8DA06826";
-	setAttr ".t" -type "double3" -1.7288500190586114 3.0102329743608767 0 ;
-createNode mesh -n "RightArmShoulderShape" -p "RightArmShoulder";
-	rename -uid "0313FF17-6D4C-82F3-B5A9-7F8DB3AAF3DE";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "LeftArmShoulder";
-	rename -uid "F1720E37-9F46-E32B-834E-C6A5259FDE9B";
-	setAttr ".t" -type "double3" 1.7593591370419992 3.0102329743608767 0 ;
-createNode mesh -n "LeftArmShoulderShape" -p "LeftArmShoulder";
-	rename -uid "5F58E1A5-CB4B-91BE-9B96-FE9593938BBD";
+createNode transform -n "LeftEye";
+	rename -uid "883BBFEC-7C4F-5622-1376-F6B03FCF80A5";
+	setAttr ".t" -type "double3" 0.071187941961236234 3.4577000381172232 0 ;
+	setAttr ".s" -type "double3" 0.13102059096463042 0.13102059096463051 0.1310205909646304 ;
+createNode mesh -n "LeftEyeShape" -p "LeftEye";
+	rename -uid "4C49A58F-BC41-7364-2683-6583CB311942";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -182,6 +154,74 @@ createNode mesh -n "LeftArmShoulderShape" -p "LeftArmShoulder";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "RightEye";
+	rename -uid "89FE6E7A-C54E-6640-703E-0C9108A42DB7";
+	setAttr ".t" -type "double3" -0.21356382588371156 3.4577000381172236 0 ;
+	setAttr ".s" -type "double3" 0.1310205909646304 0.13102059096463051 0.1310205909646304 ;
+createNode mesh -n "RightEyeShape" -p "RightEye";
+	rename -uid "8E45F34C-1844-5438-7631-94A1147CEC08";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Torso";
+	rename -uid "8375A119-9549-4883-94F3-8B9B0178AB55";
+	setAttr ".t" -type "double3" 0 3.0610815043331883 0 ;
+	setAttr ".s" -type "double3" 2.4777777653924882 1.2888888864677035 1 ;
+createNode mesh -n "TorsoShape" -p "Torso";
+	rename -uid "479769E0-474E-405B-A430-AE8D762E0E24";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "RightArmShoulder";
+	rename -uid "C6E17999-D444-0151-703F-359B8DA06826";
+	setAttr ".t" -type "double3" -1.7288500190586114 3.0102329743608767 0 ;
+createNode mesh -n "RightArmShoulderShape" -p "RightArmShoulder";
+	rename -uid "0313FF17-6D4C-82F3-B5A9-7F8DB3AAF3DE";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightArmForeArm";
 	rename -uid "F1E3F572-1F4F-B674-B460-2AB91C8245CD";
@@ -222,12 +262,128 @@ createNode mesh -n "RightArmForeArmShape" -p "RightArmForeArm";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "LeftArmShoulder";
+	rename -uid "F1720E37-9F46-E32B-834E-C6A5259FDE9B";
+	setAttr ".t" -type "double3" 1.7593591370419992 3.0102329743608767 0 ;
+createNode mesh -n "LeftArmShoulderShape" -p "LeftArmShoulder";
+	rename -uid "5F58E1A5-CB4B-91BE-9B96-FE9593938BBD";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "LeftArmForeArm";
 	rename -uid "8B351838-EE4C-C940-907A-6D887CF5807E";
 	setAttr ".t" -type "double3" 1.5559650171527502 1.2101950133410282 0 ;
 	setAttr ".s" -type "double3" 0.93333333389206763 1.1062962954457776 1 ;
 createNode mesh -n "LeftArmForeArmShape" -p "LeftArmForeArm";
 	rename -uid "988EAF08-0F4F-087F-CC88-3E88240DBADF";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "Pelvis";
+	rename -uid "60B6D7BF-1046-3506-849B-E39E5A12403A";
+	setAttr ".t" -type "double3" 0.020339411988925415 1.555965017152751 0 ;
+	setAttr ".s" -type "double3" 0.77135802656829255 0.52444444785272659 1 ;
+createNode mesh -n "PelvisShape" -p "Pelvis";
+	rename -uid "EAB48F5A-B243-110B-7633-2BBEB9623C8E";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "map1";
+	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
+		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
+		 0.875 0.25 0.125 0 0.125 0.25;
+	setAttr ".cuvs" -type "string" "map1";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
+		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
+	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
+		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
+	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
+		f 4 0 5 -2 -5
+		mu 0 4 0 1 3 2
+		f 4 1 7 -3 -7
+		mu 0 4 2 3 5 4
+		f 4 2 9 -4 -9
+		mu 0 4 4 5 7 6
+		f 4 3 11 -1 -11
+		mu 0 4 6 7 9 8
+		f 4 -12 -10 -8 -6
+		mu 0 4 1 10 11 3
+		f 4 10 4 6 8
+		mu 0 4 12 0 2 13;
+	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
+	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
+	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
+	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
+	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "LeftHip";
+	rename -uid "ACDCA5E9-A94D-B5D1-ABD6-F28809C0E37F";
+	setAttr ".t" -type "double3" 0.48814588773419487 1.5356256051638262 0 ;
+	setAttr ".s" -type "double3" 0.36702815177459858 0.3638277423400279 1 ;
+createNode mesh -n "LeftHipShape" -p "LeftHip";
+	rename -uid "2320295D-B441-9B28-F96C-EA8C5A8CC4D4";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -339,90 +495,12 @@ createNode mesh -n "RightHipShape" -p "RightHip";
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
 	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "LeftHip";
-	rename -uid "ACDCA5E9-A94D-B5D1-ABD6-F28809C0E37F";
-	setAttr ".t" -type "double3" 0.48814588773419487 1.5356256051638262 0 ;
-	setAttr ".s" -type "double3" 0.36702815177459858 0.3638277423400279 1 ;
-createNode mesh -n "LeftHipShape" -p "LeftHip";
-	rename -uid "2320295D-B441-9B28-F96C-EA8C5A8CC4D4";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightFoot";
 	rename -uid "901BBE82-B44D-9175-0919-E3AB438A8C32";
 	setAttr ".t" -type "double3" -0.47797618173973488 0.61018235966774559 0 ;
 	setAttr ".s" -type "double3" 0.63356049645635826 0.78355555723134596 1 ;
 createNode mesh -n "RightFootShape" -p "RightFoot";
 	rename -uid "C53F5720-8143-CB1C-8708-9AABF2B72025";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "map1";
-	setAttr -s 14 ".uvst[0].uvsp[0:13]" -type "float2" 0.375 0 0.625 0 0.375
-		 0.25 0.625 0.25 0.375 0.5 0.625 0.5 0.375 0.75 0.625 0.75 0.375 1 0.625 1 0.875 0
-		 0.875 0.25 0.125 0 0.125 0.25;
-	setAttr ".cuvs" -type "string" "map1";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-	setAttr -s 8 ".vt[0:7]"  -0.5 -0.5 0.5 0.5 -0.5 0.5 -0.5 0.5 0.5 0.5 0.5 0.5
-		 -0.5 0.5 -0.5 0.5 0.5 -0.5 -0.5 -0.5 -0.5 0.5 -0.5 -0.5;
-	setAttr -s 12 ".ed[0:11]"  0 1 0 2 3 0 4 5 0 6 7 0 0 2 0 1 3 0 2 4 0
-		 3 5 0 4 6 0 5 7 0 6 0 0 7 1 0;
-	setAttr -s 6 -ch 24 ".fc[0:5]" -type "polyFaces" 
-		f 4 0 5 -2 -5
-		mu 0 4 0 1 3 2
-		f 4 1 7 -3 -7
-		mu 0 4 2 3 5 4
-		f 4 2 9 -4 -9
-		mu 0 4 4 5 7 6
-		f 4 3 11 -1 -11
-		mu 0 4 6 7 9 8
-		f 4 -12 -10 -8 -6
-		mu 0 4 1 10 11 3
-		f 4 10 4 6 8
-		mu 0 4 12 0 2 13;
-	setAttr ".cd" -type "dataPolyComponent" Index_Data Edge 0 ;
-	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
-	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
-	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-	setAttr ".ai_translator" -type "string" "polymesh";
-createNode transform -n "Pelvis";
-	rename -uid "60B6D7BF-1046-3506-849B-E39E5A12403A";
-	setAttr ".t" -type "double3" 0.020339411988925415 1.555965017152751 0 ;
-	setAttr ".s" -type "double3" 0.77135802656829255 0.52444444785272659 1 ;
-createNode mesh -n "PelvisShape" -p "Pelvis";
-	rename -uid "EAB48F5A-B243-110B-7633-2BBEB9623C8E";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -576,7 +654,7 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :initialShadingGroup;
-	setAttr -s 11 ".dsm";
+	setAttr -s 13 ".dsm";
 	setAttr ".ro" yes;
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
@@ -597,8 +675,8 @@ connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape2.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape2.cmcp";
 connectAttr ":defaultColorMgtGlobals.wsn" "imagePlaneShape2.ws";
 connectAttr ":sideShape.msg" "imagePlaneShape2.ltc";
-connectAttr "polyCube1.out" "TorsoShape.i";
 connectAttr "polyCube2.out" "HeadShape.i";
+connectAttr "polyCube1.out" "TorsoShape.i";
 connectAttr "polyCube3.out" "RightArmShoulderShape.i";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
@@ -618,4 +696,6 @@ connectAttr "RightHipShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "LeftHipShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "RightFootShape.iog" ":initialShadingGroup.dsm" -na;
 connectAttr "PelvisShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "LeftEyeShape.iog" ":initialShadingGroup.dsm" -na;
+connectAttr "RightEyeShape.iog" ":initialShadingGroup.dsm" -na;
 // End of Robot.ma
