@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Robot.ma
-//Last modified: Thu, Apr 06, 2017 03:31:09 PM
+//Last modified: Thu, Apr 06, 2017 03:10:13 PM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,15 +13,15 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CC36B10F-AC40-BC7B-C7CB-54AFEE2DB0AA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 3.2834592374954923 2.0335812723748594 3.2114463955150425 ;
-	setAttr ".r" -type "double3" -5.2404537894500223 392.24696300099481 2.3503781574262036e-16 ;
+	setAttr ".t" -type "double3" -3.5703661704478238 0.16771556975089852 1.8173439149416253 ;
+	setAttr ".r" -type "double3" 6.7595462105377546 649.84696300106805 0 ;
 	setAttr ".rp" -type "double3" 0 -4.4408920985006262e-16 0 ;
 	setAttr ".rpt" -type "double3" 3.2001373479295234e-15 1.2697818385868842e-14 4.6700151520752812e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "70D1BDA7-9545-10E7-F5E8-D6A82EAB1061";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 3.8632773108795782;
+	setAttr ".coi" 5.0335447988728905;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -28842,7 +28842,6 @@ createNode mesh -n "Hips1Shape" -p "Hips1";
 createNode transform -n "RightUpperLeg" -p "Hips1";
 	rename -uid "E9C5523D-4E9E-2F81-F0C7-CC93A2A8EB92";
 	setAttr ".t" -type "double3" -4.8673754133406559 0.033997652927400646 0 ;
-	setAttr ".r" -type "double3" 2.0296793801795632 0 0 ;
 	setAttr ".rp" -type "double3" 4.4111634887877385 1.4465268870201091 0 ;
 	setAttr ".sp" -type "double3" 4.4111634887877385 1.4465268870201091 0 ;
 createNode mesh -n "RightUpperLegShape" -p "RightUpperLeg";
