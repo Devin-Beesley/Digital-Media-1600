@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Robot.ma
-//Last modified: Thu, Apr 06, 2017 03:02:14 PM
+//Last modified: Thu, Apr 06, 2017 02:58:38 PM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,15 +13,15 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CC36B10F-AC40-BC7B-C7CB-54AFEE2DB0AA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 1.2809752277134248 3.3951378442307765 10.379753792901774 ;
-	setAttr ".r" -type "double3" -11.240453789479869 367.04696300116359 -3.0044659693340569e-16 ;
+	setAttr ".t" -type "double3" -3.0184776479945334 1.8674396707858676 7.4856326222542471 ;
+	setAttr ".r" -type "double3" -4.6404537894892997 340.64696300118038 1.0534488888770213e-16 ;
 	setAttr ".rp" -type "double3" 0 -4.4408920985006262e-16 0 ;
 	setAttr ".rpt" -type "double3" 3.2001373479295234e-15 1.2697818385868842e-14 4.6700151520752812e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "70D1BDA7-9545-10E7-F5E8-D6A82EAB1061";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 11.500842279174375;
+	setAttr ".coi" 8.8269688278303047;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -16900,9 +16900,6 @@ createNode transform -n "LeftShoulder" -p "UpperSpine1";
 	rename -uid "BCC09A0D-4655-D323-12CA-74942CB07005";
 	setAttr ".t" -type "double3" 0.415917000376052 3.0586640379646761 -3.1797302827264105 ;
 	setAttr ".r" -type "double3" 85.432587638829176 -6.2207423195195881 -11.766315475668687 ;
-	setAttr ".rp" -type "double3" 1.6419967428770859 3.0764866872955934 -0.09447709646892366 ;
-	setAttr ".rpt" -type "double3" -0.29933174866532447 -3.0097168452057304 3.3135828828619118 ;
-	setAttr ".sp" -type "double3" 1.6419967428770859 3.0764866872955934 -0.09447709646892366 ;
 createNode mesh -n "LeftShoulderShape" -p "LeftShoulder";
 	rename -uid "1A2188D8-4825-4C03-7F33-7397A98659B2";
 	setAttr -k off ".v";
@@ -41890,8 +41887,6 @@ createNode lambert -n "LeftShoulderMaterial";
 createNode groupId -n "groupId257";
 	rename -uid "AEEBB5F5-2442-6243-14B0-1D84272EF64D";
 	setAttr ".ihi" 0;
-createNode character -n "character1";
-	rename -uid "CF7A14A6-E744-D928-0476-4293C7E65EC1";
 select -ne :time1;
 	setAttr ".o" 79;
 	setAttr ".unw" 79;
@@ -41922,7 +41917,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :characterPartition;
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
@@ -42651,5 +42645,4 @@ connectAttr "groupId87.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId88.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId95.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId96.msg" ":initialShadingGroup.gn" -na;
-connectAttr "character1.pa" ":characterPartition.st" -na;
 // End of Robot.ma
