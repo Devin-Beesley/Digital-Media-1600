@@ -1,6 +1,6 @@
 //Maya ASCII 2017 scene
 //Name: Robot.ma
-//Last modified: Thu, Apr 06, 2017 03:47:39 PM
+//Last modified: Thu, Apr 06, 2017 03:31:09 PM
 //Codeset: UTF-8
 requires maya "2017";
 currentUnit -l centimeter -a degree -t film;
@@ -13,7 +13,7 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "CC36B10F-AC40-BC7B-C7CB-54AFEE2DB0AA";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 8.9383307585491547 3.0056372121327581 12.174928074662283 ;
+	setAttr ".t" -type "double3" 3.2834592374954923 2.0335812723748594 3.2114463955150425 ;
 	setAttr ".r" -type "double3" -5.2404537894500223 392.24696300099481 2.3503781574262036e-16 ;
 	setAttr ".rp" -type "double3" 0 -4.4408920985006262e-16 0 ;
 	setAttr ".rpt" -type "double3" 3.2001373479295234e-15 1.2697818385868842e-14 4.6700151520752812e-16 ;
@@ -21,7 +21,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "70D1BDA7-9545-10E7-F5E8-D6A82EAB1061";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 14.505949366432667;
+	setAttr ".coi" 3.8632773108795782;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -9497,6 +9497,8 @@ createNode mesh -n "UpperSpine1Shape" -p "UpperSpine1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightShoulder" -p "UpperSpine1";
 	rename -uid "BBFB5B41-401B-7ADA-E1E1-58A0597BB9AA";
+	setAttr ".t" -type "double3" 0.415917000376052 3.0586640379646761 -3.1797302827264105 ;
+	setAttr ".r" -type "double3" 85.625910495084071 -10.185286753183648 -11.44831675539692 ;
 	setAttr ".rp" -type "double3" -1.7111504472053374 3.3712593315445707 0.72413581968600793 ;
 	setAttr ".rpt" -type "double3" -0.40924573959647137 -3.3926935372227263 2.4885357484442907 ;
 	setAttr ".sp" -type "double3" -1.7111504472053374 3.3712593315445707 0.72413581968600793 ;
@@ -11745,6 +11747,8 @@ createNode mesh -n "RightShoulderShape" -p "RightShoulder";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightUpperArm" -p "RightShoulder";
 	rename -uid "82F70040-4FC3-2FF3-B467-23902571905C";
+	setAttr ".t" -type "double3" -1.1628113983761508 3.0762260785744453 3.6974553941373989 ;
+	setAttr ".r" -type "double3" -82.614651732264605 12.22319691548225 -5.2546843777253409 ;
 	setAttr ".rp" -type "double3" 0.03038534856127395 3.0714388112595365 0.035582553377065292 ;
 	setAttr ".rpt" -type "double3" -0.62349690284732739 -2.7670394300319634 -3.0341631275327883 ;
 	setAttr ".sp" -type "double3" 0.03038534856127395 3.0714388112595365 0.035582553377065292 ;
@@ -14331,6 +14335,8 @@ createNode mesh -n "RightUpperArmShape" -p "RightUpperArm";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightForeArm" -p "RightUpperArm";
 	rename -uid "087A98FD-409C-F3B2-3007-9B920AF37937";
+	setAttr ".t" -type "double3" 1.7739282271351466 0.00020488182408405216 -0.035371441340333043 ;
+	setAttr ".r" -type "double3" 0.66374069556828486 0 0 ;
 	setAttr ".rp" -type "double3" -1.7829089008922614 2.123050347857522 0.026643812996360223 ;
 	setAttr ".rpt" -type "double3" 0 -0.00045110209000647617 0.024592055064690435 ;
 	setAttr ".sp" -type "double3" -1.7829089008922614 2.123050347857522 0.026643812996360223 ;
@@ -16667,6 +16673,8 @@ createNode mesh -n "RightForeArmShape" -p "RightForeArm";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightFinger2" -p "RightForeArm";
 	rename -uid "2EE444C8-4052-61F7-D74B-C29FCD2AC87B";
+	setAttr ".t" -type "double3" 2.2051799448735943 0.70344929976268933 0.00082293388044080151 ;
+	setAttr ".r" -type "double3" -78.70789797856439 -88.754697525619065 169.69144226139994 ;
 	setAttr ".s" -type "double3" 0.28037832364906129 0.28037832364906118 0.28037832364906129 ;
 	setAttr ".rp" -type "double3" 0.09622646684933768 4.4495579732115926 -0.31523770605947865 ;
 	setAttr ".rpt" -type "double3" -4.5515692321916488 -4.2105572546340806 0.31527005048552859 ;
@@ -16744,6 +16752,8 @@ createNode mesh -n "RightFingerShape2" -p "RightFinger2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightFinger1" -p "RightForeArm";
 	rename -uid "50A47E1E-49CD-59FE-D551-5E92468FC0BA";
+	setAttr ".t" -type "double3" 1.7747371303929826 0.70344929976268933 0.31326277253851703 ;
+	setAttr ".r" -type "double3" 77.319066777992802 178.97957851328943 1.0067275505486699 ;
 	setAttr ".s" -type "double3" 0.28037832364906129 0.28037832364906118 0.28037832364906123 ;
 	setAttr ".rp" -type "double3" 3.5370125971003228 -0.096895793169059871 -0.31267086611162548 ;
 	setAttr ".rpt" -type "double3" -7.0808096306585036 0.31843953691126609 0.41282540593955164 ;
@@ -16821,6 +16831,8 @@ createNode mesh -n "RightFingerShape1" -p "RightFinger1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightFinger3" -p "RightForeArm";
 	rename -uid "EC41D6AE-4120-7482-ECA3-B8906DA6704F";
+	setAttr ".t" -type "double3" 1.2996130640712558 0.70344929976268933 0.0072068905551459506 ;
+	setAttr ".r" -type "double3" 129.24527393393572 92.211099879204525 45.507253374356345 ;
 	setAttr ".s" -type "double3" 0.28037832364906135 0.28037832364906118 0.28037832364906129 ;
 	setAttr ".rp" -type "double3" 0.066232994533888603 -2.4830483343658791 -0.50618844495085258 ;
 	setAttr ".rpt" -type "double3" -2.5906332667205865 2.7144072500596321 0.50184102311779211 ;
@@ -16898,6 +16910,8 @@ createNode mesh -n "RightFingerShape3" -p "RightFinger3";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "LeftShoulder" -p "UpperSpine1";
 	rename -uid "BCC09A0D-4655-D323-12CA-74942CB07005";
+	setAttr ".t" -type "double3" 0.415917000376052 3.0586640379646761 -3.1797302827264105 ;
+	setAttr ".r" -type "double3" 85.432587638829176 -6.2207423195195881 -11.766315475668687 ;
 	setAttr ".rp" -type "double3" 1.6419967428770859 3.0764866872955934 -0.09447709646892366 ;
 	setAttr ".rpt" -type "double3" -0.29933174866532447 -3.0097168452057304 3.3135828828619118 ;
 	setAttr ".sp" -type "double3" 1.6419967428770859 3.0764866872955934 -0.09447709646892366 ;
@@ -19146,6 +19160,8 @@ createNode mesh -n "LeftShoulderShape" -p "LeftShoulder";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "LeftUpperArm" -p "LeftShoulder";
 	rename -uid "F0BBF1EB-4003-4B9B-C249-28AE6E7DEA26";
+	setAttr ".t" -type "double3" -1.1628113983761508 3.0762260785744453 3.6974553941373989 ;
+	setAttr ".r" -type "double3" -85.608170223936639 12.223196915482253 -5.2546843777252725 ;
 	setAttr ".rp" -type "double3" 3.554153861710037 3.0421321277710964 1.1115014960418183e-16 ;
 	setAttr ".rpt" -type "double3" -0.71564740102800628 -3.0910273997919808 -3.7184765537200359 ;
 	setAttr ".sp" -type "double3" 3.554153861710037 3.0421321277710964 1.1115014960418183e-16 ;
@@ -21730,6 +21746,8 @@ createNode mesh -n "LeftUpperArmShape" -p "LeftUpperArm";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "LeftForeArm1" -p "LeftUpperArm";
 	rename -uid "0972DECB-4D37-A306-F5F3-A1BAFBA3F971";
+	setAttr ".t" -type "double3" 1.7739282271351466 0.00020488182408405216 -0.035371441340333043 ;
+	setAttr ".r" -type "double3" 0.66374069556828486 0 0 ;
 	setAttr ".rp" -type "double3" 1.7370722640311538 2.0869631767272856 0.019981002895514282 ;
 	setAttr ".rpt" -type "double3" 0 -0.00037149733863881603 0.024174461074512637 ;
 	setAttr ".sp" -type "double3" 1.7370722640311538 2.0869631767272856 0.019981002895514282 ;
@@ -24142,6 +24160,8 @@ createNode mesh -n "LeftFingerShape2" -p "LeftFinger2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "LeftFinger1" -p "LeftForeArm1";
 	rename -uid "97B8A008-48C2-1710-4D1A-B08420802D20";
+	setAttr ".t" -type "double3" 1.7747371303929826 0.70344929976268933 0.31326277253851703 ;
+	setAttr ".r" -type "double3" 77.319066777992802 178.97957851328943 1.0067275505486699 ;
 	setAttr ".s" -type "double3" 0.28037832364906129 0.28037832364906118 0.28037832364906123 ;
 	setAttr ".rp" -type "double3" 1.336948036765518e-07 -0.049079011258349965 -0.23819330162289587 ;
 	setAttr ".rpt" -type "double3" -0.0056775369224268315 0.27062276440931332 0.33834783630059806 ;
@@ -24219,6 +24239,8 @@ createNode mesh -n "LeftFingerShape1" -p "LeftFinger1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "LeftFinger3" -p "LeftForeArm1";
 	rename -uid "5ED9250D-4704-D865-016E-16B2F1E61C56";
+	setAttr ".t" -type "double3" 2.2051799448735943 0.70344929976268933 0.00082293388044080151 ;
+	setAttr ".r" -type "double3" -78.70789797856439 -88.754697525619065 169.69144226139994 ;
 	setAttr ".s" -type "double3" 0.28037832364906129 0.28037832364906118 0.28037832364906129 ;
 	setAttr ".rp" -type "double3" -2.0889813368880342e-09 -0.049079161665002993 -0.23819326819919598 ;
 	setAttr ".rpt" -type "double3" 0.044982941628511706 0.28807985461291891 0.23822560938423828 ;
@@ -24296,6 +24318,7 @@ createNode mesh -n "LeftFingerShape3" -p "LeftFinger3";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "MidWaist" -p "UpperSpine1";
 	rename -uid "C83B16FA-4612-FE0D-9F54-8BA9C699D817";
+	setAttr ".t" -type "double3" 0.0034952263920375423 2.1053010152638749 -0.062625758719137295 ;
 	setAttr ".s" -type "double3" 0.31410109927385704 0.31410109927385704 0.31410109927385704 ;
 	setAttr ".rp" -type "double3" 6.4230620845469893e-08 -0.016533371041604301 -0.33563890491535553 ;
 	setAttr ".sp" -type "double3" 2.0449027715585544e-07 -0.052637100219726562 -1.0685696601867678 ;
@@ -24782,6 +24805,7 @@ createNode mesh -n "MidWaistShape" -p "MidWaist";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "Hips1" -p "MidWaist";
 	rename -uid "129AF43B-4FA1-95BD-6F7E-0B999DD3CDC4";
+	setAttr ".t" -type "double3" -0.011127711428319901 -6.7026222452927957 0.19938089635444195 ;
 	setAttr ".s" -type "double3" 3.1836883166337619 3.1836883166337619 3.1836883166337619 ;
 	setAttr ".rp" -type "double3" 8.4417967026072867e-09 5.5156401141797851 -0.19576653029994598 ;
 	setAttr ".sp" -type "double3" 2.6515776241353706e-09 1.7324686230628528 -0.061490482368241867 ;
@@ -28817,6 +28841,8 @@ createNode mesh -n "Hips1Shape" -p "Hips1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightUpperLeg" -p "Hips1";
 	rename -uid "E9C5523D-4E9E-2F81-F0C7-CC93A2A8EB92";
+	setAttr ".t" -type "double3" -4.8673754133406559 0.033997652927400646 0 ;
+	setAttr ".r" -type "double3" 2.0296793801795632 0 0 ;
 	setAttr ".rp" -type "double3" 4.4111634887877385 1.4465268870201091 0 ;
 	setAttr ".sp" -type "double3" 4.4111634887877385 1.4465268870201091 0 ;
 createNode mesh -n "RightUpperLegShape" -p "RightUpperLeg";
@@ -31230,6 +31256,7 @@ createNode mesh -n "RightUpperLegShape" -p "RightUpperLeg";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightFoot1" -p "RightUpperLeg";
 	rename -uid "E53A822D-4CB2-CB39-7855-4FBA5D7C044F";
+	setAttr ".t" -type "double3" 4.8673754133406559 -0.033997652927400646 0 ;
 	setAttr ".rp" -type "double3" -0.45189528167247772 1.0451846122741699 -0.014391690492630005 ;
 	setAttr ".sp" -type "double3" -0.45189528167247772 1.0451846122741699 -0.014391690492630005 ;
 createNode mesh -n "RightFoot1Shape" -p "RightFoot1";
@@ -33871,6 +33898,8 @@ createNode mesh -n "RightFoot1Shape" -p "RightFoot1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightToe1" -p "RightFoot1";
 	rename -uid "C7998D41-402E-1CB9-AE63-54991FB19C60";
+	setAttr ".t" -type "double3" 0.13122117463827798 0.2832175290448769 0.70638256939805888 ;
+	setAttr ".r" -type "double3" 0 -19.388557946578015 0 ;
 	setAttr ".s" -type "double3" 0.22252876334621552 0.22252876334621549 0.22252876334621552 ;
 	setAttr ".rp" -type "double3" -0.92703729533560086 -0.028890326360014144 -0.13059350883799653 ;
 	setAttr ".rpt" -type "double3" 0.095926725675982497 0 -0.30034503955821185 ;
@@ -33954,6 +33983,8 @@ createNode mesh -n "RightToeShape1" -p "RightToe1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightToe2" -p "RightFoot1";
 	rename -uid "F323CC21-4BD4-8DAC-1FF5-FC807DDE2753";
+	setAttr ".t" -type "double3" 0.48748970894476568 0.28321752904487729 0.44291001813350633 ;
+	setAttr ".r" -type "double3" 0 2.6472435656167392 0 ;
 	setAttr ".s" -type "double3" 0.22252876334621552 0.22252876334621549 0.22252876334621552 ;
 	setAttr ".rp" -type "double3" -0.92703729533560086 -0.028890326360014144 -0.13059350883799653 ;
 	setAttr ".rpt" -type "double3" -0.0050423703406259086 0 0.042956140514549823 ;
@@ -34036,6 +34067,8 @@ createNode mesh -n "RightToeShape2" -p "RightToe2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RightToe3" -p "RightFoot1";
 	rename -uid "8A71F412-42FD-00C8-25E9-33A140B1CF74";
+	setAttr ".t" -type "double3" 0.68712213348946583 0.2832175290448769 -0.010066124935034448 ;
+	setAttr ".r" -type "double3" 0 24.496851694481705 0 ;
 	setAttr ".s" -type "double3" 0.22252876334621555 0.22252876334621549 0.22252876334621555 ;
 	setAttr ".rp" -type "double3" -0.92703729533560053 -0.028890326360014179 -0.13059350883799667 ;
 	setAttr ".rpt" -type "double3" 0.029298421301100219 0 0.39614524681203689 ;
@@ -34119,6 +34152,8 @@ createNode mesh -n "RightToeShape3" -p "RightToe3";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "polySurface143" -p "RightFoot1";
 	rename -uid "EA3C2A53-4E06-2420-F735-5799F9666122";
+	setAttr ".t" -type "double3" 0.50454923104975402 0.28321752904487751 -0.37246656892984165 ;
+	setAttr ".r" -type "double3" 0 177.87319319951686 0 ;
 	setAttr ".s" -type "double3" 0.22252876334621549 0.22252876334621549 0.22252876334621549 ;
 	setAttr ".rp" -type "double3" 1.0032403919421462 -0.028890326360014353 -0.12510099083610191 ;
 	setAttr ".rpt" -type "double3" -2.0104323468017955 0 0.21288429220033406 ;
@@ -34201,6 +34236,8 @@ createNode mesh -n "RearRightToe1" -p "polySurface143";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "UpperLeftLeg" -p "Hips1";
 	rename -uid "73451711-451C-D248-1111-BCA5199F7EA9";
+	setAttr ".t" -type "double3" -4.8673754133406559 0.033997652927400646 0 ;
+	setAttr ".r" -type "double3" 0.88917072696374144 0 0 ;
 	setAttr ".rp" -type "double3" 5.3423341311636845 1.4465268870201091 0 ;
 	setAttr ".sp" -type "double3" 5.3423341311636845 1.4465268870201091 0 ;
 createNode mesh -n "UpperLeftLegShape" -p "UpperLeftLeg";
@@ -36615,6 +36652,7 @@ createNode mesh -n "UpperLeftLegShape" -p "UpperLeftLeg";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "LeftFoot3" -p "UpperLeftLeg";
 	rename -uid "E3F59C61-4F58-1027-5BC9-4A9CBBD1C99F";
+	setAttr ".t" -type "double3" 4.8673754133406559 -0.033997652927400646 0 ;
 	setAttr ".rp" -type "double3" 0.45189528167247772 1.0705732107162476 -0.014391690492630005 ;
 	setAttr ".sp" -type "double3" 0.45189528167247772 1.0705732107162476 -0.014391690492630005 ;
 createNode mesh -n "LeftFoot3Shape" -p "LeftFoot3";
@@ -39256,6 +39294,8 @@ createNode mesh -n "LeftFoot3Shape" -p "LeftFoot3";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "LeftToe1" -p "LeftFoot3";
 	rename -uid "2FEF698B-4972-922F-4215-C5B5600BE2C3";
+	setAttr ".t" -type "double3" 0.19159088780056099 0.27970034618051204 0.35267262572879005 ;
+	setAttr ".r" -type "double3" 0 -21.264887162998189 0 ;
 	setAttr ".s" -type "double3" 0.22252876334621552 0.22252876334621549 0.22252876334621552 ;
 createNode mesh -n "LeftToeShape1" -p "LeftToe1";
 	rename -uid "C3E01F01-4B75-A073-84F5-7CBF09A42041";
@@ -39335,6 +39375,8 @@ createNode mesh -n "LeftToeShape1" -p "LeftToe1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "LeftToe2" -p "LeftFoot3";
 	rename -uid "FD24F937-4105-872B-096B-B9BDE750E398";
+	setAttr ".t" -type "double3" 0.46874280574532856 0.28497824775271152 0.46543993266880923 ;
+	setAttr ".r" -type "double3" 0 2.6472435656167392 0 ;
 	setAttr ".s" -type "double3" 0.22252876334621552 0.22252876334621549 0.22252876334621552 ;
 createNode mesh -n "LeftToeShape2" -p "LeftToe2";
 	rename -uid "B2B73604-4514-0A76-1649-F9B6D110D283";
@@ -39413,6 +39455,8 @@ createNode mesh -n "LeftToeShape2" -p "LeftToe2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "LeftToe3" -p "LeftFoot3";
 	rename -uid "EA67F56F-4556-6793-4A56-69B059768A13";
+	setAttr ".t" -type "double3" 0.71356891830368707 0.2849782477527123 0.34624750388430781 ;
+	setAttr ".r" -type "double3" 0 26.878470906967657 0 ;
 	setAttr ".s" -type "double3" 0.22252876334621552 0.22252876334621549 0.22252876334621552 ;
 createNode mesh -n "LeftToeShape3" -p "LeftToe3";
 	rename -uid "948A78EF-44CE-62BD-F800-448F1D1D878F";
@@ -39492,6 +39536,8 @@ createNode mesh -n "LeftToeShape3" -p "LeftToe3";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "RearLeftToe1" -p "LeftFoot3";
 	rename -uid "135A5449-46F3-36D6-A7A3-D6950B65CC5C";
+	setAttr ".t" -type "double3" 0.50454923104975391 0.28497824775271152 -0.36813462493456367 ;
+	setAttr ".r" -type "double3" 0 177.87319319951686 0 ;
 	setAttr ".s" -type "double3" 0.22252876334621549 0.22252876334621549 0.22252876334621549 ;
 createNode mesh -n "RearLeftToeShape1" -p "RearLeftToe1";
 	rename -uid "0FA38488-4CEA-1142-B9AF-3E824F80243F";
@@ -41912,183 +41958,6 @@ createNode animCurveTU -n "LeftFinger2_scaleZ";
 	rename -uid "85912577-4245-316B-45B4-BFA716602F7C";
 	setAttr ".tan" 18;
 	setAttr ".ktv[0]"  79 0.28037832364906129;
-createNode character -n "Robot";
-	rename -uid "216A7E0A-DF48-201A-FD3C-CA8D56A6CD68";
-	addAttr -ci true -h true -sn "aal" -ln "attributeAliasList" -dt "attributeAlias";
-	setAttr -s 162 ".dnsm";
-	setAttr -s 81 ".lv[1:81]"  0.31326277253851703 0.70344929976268933 
-		1.7747371303929826 0.0072068905551459506 0.70344929976268933 1.2996130640712558 -3.1797302827264105 
-		3.0586640379646761 0.415917000376052 3.6974553941373989 3.0762260785744453 -1.1628113983761508 
-		-0.035371441340333043 0.00020488182408405216 1.7739282271351466 0.0072068905551459506 
-		0.70344929976268933 1.2996130640712558 0.31326277253851703 0.70344929976268933 1.7747371303929826 
-		0.00082293388044080151 0.70344929976268933 2.2051799448735943 -0.062625758719137295 
-		2.1053010152638749 0.0034952263920375423 0.19938089635444195 -6.7026222452927957 
-		-0.011127711428319901 0 0.033997652927400646 -4.8673754133406559 0 -0.033997652927400646 
-		4.8673754133406559 0.70638256939805888 0.2832175290448769 0.13122117463827798 0.44291001813350633 
-		0.28321752904487729 0.48748970894476568 -0.010066124935034448 0.2832175290448769 
-		0.68712213348946583 -0.37246656892984165 0.28321752904487751 0.50454923104975402 
-		0 0.033997652927400646 -4.8673754133406559 0 -0.033997652927400646 4.8673754133406559 
-		0.35267262572879005 0.27970034618051204 0.19159088780056099 0.46543993266880923 0.28497824775271152 
-		0.46874280574532856 0.34624750388430781 0.2849782477527123 0.71356891830368707 -0.36813462493456367 
-		0.28497824775271152 0.50454923104975391 0 0 0 -3.1797302827264105 3.0586640379646761 
-		0.415917000376052 3.6974553941373989 3.0762260785744453 -1.1628113983761508 -0.035371441340333043 
-		0.00020488182408405216 1.7739282271351466 0.00082293388044080151 0.70344929976268933 
-		2.2051799448735943;
-	setAttr -s 81 ".lv";
-	setAttr -s 81 ".av[1:81]"  1.0067275505486699 178.97957851328943 77.319066777992802 
-		45.507253374356345 92.211099879204525 129.24527393393572 -11.766315475668687 -6.2207423195195881 
-		85.432587638829176 -5.2546843777252725 12.223196915482253 -85.608170223936639 0 0 
-		0.66374069556828486 45.507253374356345 92.211099879204525 129.24527393393572 1.0067275505486699 
-		178.97957851328943 77.319066777992802 169.69144226139994 -88.754697525619065 -78.70789797856439 
-		0 0 0 0 0 0 0 0 2.0296793801795632 0 0 0 0 -19.388557946578015 0 0 2.6472435656167392 
-		0 0 24.496851694481705 0 0 177.87319319951686 0 0 0 0.88917072696374144 0 0 0 0 -21.264887162998189 
-		0 0 2.6472435656167392 0 0 26.878470906967657 0 0 177.87319319951686 0 0 0 0 -11.44831675539692 
-		-10.185286753183648 85.625910495084071 -5.2546843777253409 12.22319691548225 -82.614651732264605 
-		0 0 0.66374069556828486 169.69144226139994 -88.754697525619065 -78.70789797856439;
-	setAttr -s 81 ".av";
-	setAttr ".am" -type "characterMapping" 162 "RightFinger1.rotateZ" 2 1 "RightFinger1.rotateY" 
-		2 2 "RightFinger1.rotateX" 2 3 "RightFinger1.translateZ" 1 
-		1 "RightFinger1.translateY" 1 2 "RightFinger1.translateX" 1 3 "RightFinger3.rotateZ" 
-		2 4 "RightFinger3.rotateY" 2 5 "RightFinger3.rotateX" 2 
-		6 "RightFinger3.translateZ" 1 4 "RightFinger3.translateY" 1 5 "RightFinger3.translateX" 
-		1 6 "LeftShoulder.rotateZ" 2 7 "LeftShoulder.rotateY" 2 
-		8 "LeftShoulder.rotateX" 2 9 "LeftShoulder.translateZ" 1 7 "LeftShoulder.translateY" 
-		1 8 "LeftShoulder.translateX" 1 9 "LeftUpperArm.rotateZ" 2 
-		10 "LeftUpperArm.rotateY" 2 11 "LeftUpperArm.rotateX" 2 12 "LeftUpperArm.translateZ" 
-		1 10 "LeftUpperArm.translateY" 1 11 "LeftUpperArm.translateX" 1 
-		12 "LeftForeArm1.rotateZ" 2 13 "LeftForeArm1.rotateY" 2 14 "LeftForeArm1.rotateX" 
-		2 15 "LeftForeArm1.translateZ" 1 13 "LeftForeArm1.translateY" 1 
-		14 "LeftForeArm1.translateX" 1 15 "LeftFinger2.rotateZ" 2 16 "LeftFinger2.rotateY" 
-		2 17 "LeftFinger2.rotateX" 2 18 "LeftFinger2.translateZ" 1 
-		16 "LeftFinger2.translateY" 1 17 "LeftFinger2.translateX" 1 18 "LeftFinger1.rotateZ" 
-		2 19 "LeftFinger1.rotateY" 2 20 "LeftFinger1.rotateX" 2 21 "LeftFinger1.translateZ" 
-		1 19 "LeftFinger1.translateY" 1 20 "LeftFinger1.translateX" 1 
-		21 "LeftFinger3.rotateZ" 2 22 "LeftFinger3.rotateY" 2 23 "LeftFinger3.rotateX" 
-		2 24 "LeftFinger3.translateZ" 1 22 "LeftFinger3.translateY" 1 
-		23 "LeftFinger3.translateX" 1 24 "MidWaist.rotateZ" 2 25 "MidWaist.rotateY" 
-		2 26 "MidWaist.rotateX" 2 27 "MidWaist.translateZ" 1 25 "MidWaist.translateY" 
-		1 26 "MidWaist.translateX" 1 27 "Hips1.rotateZ" 2 28 "Hips1.rotateY" 
-		2 29 "Hips1.rotateX" 2 30 "Hips1.translateZ" 1 28 "Hips1.translateY" 
-		1 29 "Hips1.translateX" 1 30 "RightUpperLeg.rotateZ" 2 31 "RightUpperLeg.rotateY" 
-		2 32 "RightUpperLeg.rotateX" 2 33 "RightUpperLeg.translateZ" 1 
-		31 "RightUpperLeg.translateY" 1 32 "RightUpperLeg.translateX" 1 
-		33 "RightFoot1.rotateZ" 2 34 "RightFoot1.rotateY" 2 35 "RightFoot1.rotateX" 
-		2 36 "RightFoot1.translateZ" 1 34 "RightFoot1.translateY" 1 
-		35 "RightFoot1.translateX" 1 36 "RightToe1.rotateZ" 2 37 "RightToe1.rotateY" 
-		2 38 "RightToe1.rotateX" 2 39 "RightToe1.translateZ" 1 37 "RightToe1.translateY" 
-		1 38 "RightToe1.translateX" 1 39 "RightToe2.rotateZ" 2 40 "RightToe2.rotateY" 
-		2 41 "RightToe2.rotateX" 2 42 "RightToe2.translateZ" 1 40 "RightToe2.translateY" 
-		1 41 "RightToe2.translateX" 1 42 "RightToe3.rotateZ" 2 43 "RightToe3.rotateY" 
-		2 44 "RightToe3.rotateX" 2 45 "RightToe3.translateZ" 1 43 "RightToe3.translateY" 
-		1 44 "RightToe3.translateX" 1 45 "polySurface143.rotateZ" 2 
-		46 "polySurface143.rotateY" 2 47 "polySurface143.rotateX" 2 48 "polySurface143.translateZ" 
-		1 46 "polySurface143.translateY" 1 47 "polySurface143.translateX" 
-		1 48 "UpperLeftLeg.rotateZ" 2 49 "UpperLeftLeg.rotateY" 2 
-		50 "UpperLeftLeg.rotateX" 2 51 "UpperLeftLeg.translateZ" 1 49 "UpperLeftLeg.translateY" 
-		1 50 "UpperLeftLeg.translateX" 1 51 "LeftFoot3.rotateZ" 2 
-		52 "LeftFoot3.rotateY" 2 53 "LeftFoot3.rotateX" 2 54 "LeftFoot3.translateZ" 
-		1 52 "LeftFoot3.translateY" 1 53 "LeftFoot3.translateX" 1 
-		54 "LeftToe1.rotateZ" 2 55 "LeftToe1.rotateY" 2 56 "LeftToe1.rotateX" 
-		2 57 "LeftToe1.translateZ" 1 55 "LeftToe1.translateY" 1 56 "LeftToe1.translateX" 
-		1 57 "LeftToe2.rotateZ" 2 58 "LeftToe2.rotateY" 2 59 "LeftToe2.rotateX" 
-		2 60 "LeftToe2.translateZ" 1 58 "LeftToe2.translateY" 1 59 "LeftToe2.translateX" 
-		1 60 "LeftToe3.rotateZ" 2 61 "LeftToe3.rotateY" 2 62 "LeftToe3.rotateX" 
-		2 63 "LeftToe3.translateZ" 1 61 "LeftToe3.translateY" 1 62 "LeftToe3.translateX" 
-		1 63 "RearLeftToe1.rotateZ" 2 64 "RearLeftToe1.rotateY" 2 
-		65 "RearLeftToe1.rotateX" 2 66 "RearLeftToe1.translateZ" 1 64 "RearLeftToe1.translateY" 
-		1 65 "RearLeftToe1.translateX" 1 66 "UpperSpine1.rotateZ" 2 
-		67 "UpperSpine1.rotateY" 2 68 "UpperSpine1.rotateX" 2 69 "UpperSpine1.translateZ" 
-		1 67 "UpperSpine1.translateY" 1 68 "UpperSpine1.translateX" 1 
-		69 "RightShoulder.rotateZ" 2 70 "RightShoulder.rotateY" 2 71 "RightShoulder.rotateX" 
-		2 72 "RightShoulder.translateZ" 1 70 "RightShoulder.translateY" 
-		1 71 "RightShoulder.translateX" 1 72 "RightUpperArm.rotateZ" 2 
-		73 "RightUpperArm.rotateY" 2 74 "RightUpperArm.rotateX" 2 75 "RightUpperArm.translateZ" 
-		1 73 "RightUpperArm.translateY" 1 74 "RightUpperArm.translateX" 
-		1 75 "RightForeArm.rotateZ" 2 76 "RightForeArm.rotateY" 2 
-		77 "RightForeArm.rotateX" 2 78 "RightForeArm.translateZ" 1 76 "RightForeArm.translateY" 
-		1 77 "RightForeArm.translateX" 1 78 "RightFinger2.rotateZ" 2 
-		79 "RightFinger2.rotateY" 2 80 "RightFinger2.rotateX" 2 81 "RightFinger2.translateZ" 
-		1 79 "RightFinger2.translateY" 1 80 "RightFinger2.translateX" 1 
-		81  ;
-	setAttr ".aal" -type "attributeAlias" {"LeftUpperArm_rotateZ","angularValues[10]"
-		,"LeftUpperArm_rotateY","angularValues[11]","LeftUpperArm_rotateX","angularValues[12]"
-		,"LeftForeArm1_rotateZ","angularValues[13]","LeftForeArm1_rotateY","angularValues[14]"
-		,"LeftForeArm1_rotateX","angularValues[15]","LeftFinger2_rotateZ","angularValues[16]"
-		,"LeftFinger2_rotateY","angularValues[17]","LeftFinger2_rotateX","angularValues[18]"
-		,"LeftFinger1_rotateZ","angularValues[19]","RightFinger1_rotateZ","angularValues[1]"
-		,"LeftFinger1_rotateY","angularValues[20]","LeftFinger1_rotateX","angularValues[21]"
-		,"LeftFinger3_rotateZ","angularValues[22]","LeftFinger3_rotateY","angularValues[23]"
-		,"LeftFinger3_rotateX","angularValues[24]","MidWaist_rotateZ","angularValues[25]"
-		,"MidWaist_rotateY","angularValues[26]","MidWaist_rotateX","angularValues[27]","Hips1_rotateZ"
-		,"angularValues[28]","Hips1_rotateY","angularValues[29]","RightFinger1_rotateY","angularValues[2]"
-		,"Hips1_rotateX","angularValues[30]","RightUpperLeg_rotateZ","angularValues[31]","RightUpperLeg_rotateY"
-		,"angularValues[32]","RightUpperLeg_rotateX","angularValues[33]","RightFoot1_rotateZ"
-		,"angularValues[34]","RightFoot1_rotateY","angularValues[35]","RightFoot1_rotateX"
-		,"angularValues[36]","RightToe1_rotateZ","angularValues[37]","RightToe1_rotateY","angularValues[38]"
-		,"RightToe1_rotateX","angularValues[39]","RightFinger1_rotateX","angularValues[3]"
-		,"RightToe2_rotateZ","angularValues[40]","RightToe2_rotateY","angularValues[41]","RightToe2_rotateX"
-		,"angularValues[42]","RightToe3_rotateZ","angularValues[43]","RightToe3_rotateY","angularValues[44]"
-		,"RightToe3_rotateX","angularValues[45]","polySurface143_rotateZ","angularValues[46]"
-		,"polySurface143_rotateY","angularValues[47]","polySurface143_rotateX","angularValues[48]"
-		,"UpperLeftLeg_rotateZ","angularValues[49]","RightFinger3_rotateZ","angularValues[4]"
-		,"UpperLeftLeg_rotateY","angularValues[50]","UpperLeftLeg_rotateX","angularValues[51]"
-		,"LeftFoot3_rotateZ","angularValues[52]","LeftFoot3_rotateY","angularValues[53]","LeftFoot3_rotateX"
-		,"angularValues[54]","LeftToe1_rotateZ","angularValues[55]","LeftToe1_rotateY","angularValues[56]"
-		,"LeftToe1_rotateX","angularValues[57]","LeftToe2_rotateZ","angularValues[58]","LeftToe2_rotateY"
-		,"angularValues[59]","RightFinger3_rotateY","angularValues[5]","LeftToe2_rotateX"
-		,"angularValues[60]","LeftToe3_rotateZ","angularValues[61]","LeftToe3_rotateY","angularValues[62]"
-		,"LeftToe3_rotateX","angularValues[63]","RearLeftToe1_rotateZ","angularValues[64]"
-		,"RearLeftToe1_rotateY","angularValues[65]","RearLeftToe1_rotateX","angularValues[66]"
-		,"UpperSpine1_rotateZ","angularValues[67]","UpperSpine1_rotateY","angularValues[68]"
-		,"UpperSpine1_rotateX","angularValues[69]","RightFinger3_rotateX","angularValues[6]"
-		,"RightShoulder_rotateZ","angularValues[70]","RightShoulder_rotateY","angularValues[71]"
-		,"RightShoulder_rotateX","angularValues[72]","RightUpperArm_rotateZ","angularValues[73]"
-		,"RightUpperArm_rotateY","angularValues[74]","RightUpperArm_rotateX","angularValues[75]"
-		,"RightForeArm_rotateZ","angularValues[76]","RightForeArm_rotateY","angularValues[77]"
-		,"RightForeArm_rotateX","angularValues[78]","RightFinger2_rotateZ","angularValues[79]"
-		,"LeftShoulder_rotateZ","angularValues[7]","RightFinger2_rotateY","angularValues[80]"
-		,"RightFinger2_rotateX","angularValues[81]","LeftShoulder_rotateY","angularValues[8]"
-		,"LeftShoulder_rotateX","angularValues[9]","LeftUpperArm_translateZ","linearValues[10]"
-		,"LeftUpperArm_translateY","linearValues[11]","LeftUpperArm_translateX","linearValues[12]"
-		,"LeftForeArm1_translateZ","linearValues[13]","LeftForeArm1_translateY","linearValues[14]"
-		,"LeftForeArm1_translateX","linearValues[15]","LeftFinger2_translateZ","linearValues[16]"
-		,"LeftFinger2_translateY","linearValues[17]","LeftFinger2_translateX","linearValues[18]"
-		,"LeftFinger1_translateZ","linearValues[19]","RightFinger1_translateZ","linearValues[1]"
-		,"LeftFinger1_translateY","linearValues[20]","LeftFinger1_translateX","linearValues[21]"
-		,"LeftFinger3_translateZ","linearValues[22]","LeftFinger3_translateY","linearValues[23]"
-		,"LeftFinger3_translateX","linearValues[24]","MidWaist_translateZ","linearValues[25]"
-		,"MidWaist_translateY","linearValues[26]","MidWaist_translateX","linearValues[27]"
-		,"Hips1_translateZ","linearValues[28]","Hips1_translateY","linearValues[29]","RightFinger1_translateY"
-		,"linearValues[2]","Hips1_translateX","linearValues[30]","RightUpperLeg_translateZ"
-		,"linearValues[31]","RightUpperLeg_translateY","linearValues[32]","RightUpperLeg_translateX"
-		,"linearValues[33]","RightFoot1_translateZ","linearValues[34]","RightFoot1_translateY"
-		,"linearValues[35]","RightFoot1_translateX","linearValues[36]","RightToe1_translateZ"
-		,"linearValues[37]","RightToe1_translateY","linearValues[38]","RightToe1_translateX"
-		,"linearValues[39]","RightFinger1_translateX","linearValues[3]","RightToe2_translateZ"
-		,"linearValues[40]","RightToe2_translateY","linearValues[41]","RightToe2_translateX"
-		,"linearValues[42]","RightToe3_translateZ","linearValues[43]","RightToe3_translateY"
-		,"linearValues[44]","RightToe3_translateX","linearValues[45]","polySurface143_translateZ"
-		,"linearValues[46]","polySurface143_translateY","linearValues[47]","polySurface143_translateX"
-		,"linearValues[48]","UpperLeftLeg_translateZ","linearValues[49]","RightFinger3_translateZ"
-		,"linearValues[4]","UpperLeftLeg_translateY","linearValues[50]","UpperLeftLeg_translateX"
-		,"linearValues[51]","LeftFoot3_translateZ","linearValues[52]","LeftFoot3_translateY"
-		,"linearValues[53]","LeftFoot3_translateX","linearValues[54]","LeftToe1_translateZ"
-		,"linearValues[55]","LeftToe1_translateY","linearValues[56]","LeftToe1_translateX"
-		,"linearValues[57]","LeftToe2_translateZ","linearValues[58]","LeftToe2_translateY"
-		,"linearValues[59]","RightFinger3_translateY","linearValues[5]","LeftToe2_translateX"
-		,"linearValues[60]","LeftToe3_translateZ","linearValues[61]","LeftToe3_translateY"
-		,"linearValues[62]","LeftToe3_translateX","linearValues[63]","RearLeftToe1_translateZ"
-		,"linearValues[64]","RearLeftToe1_translateY","linearValues[65]","RearLeftToe1_translateX"
-		,"linearValues[66]","UpperSpine1_translateZ","linearValues[67]","UpperSpine1_translateY"
-		,"linearValues[68]","UpperSpine1_translateX","linearValues[69]","RightFinger3_translateX"
-		,"linearValues[6]","RightShoulder_translateZ","linearValues[70]","RightShoulder_translateY"
-		,"linearValues[71]","RightShoulder_translateX","linearValues[72]","RightUpperArm_translateZ"
-		,"linearValues[73]","RightUpperArm_translateY","linearValues[74]","RightUpperArm_translateX"
-		,"linearValues[75]","RightForeArm_translateZ","linearValues[76]","RightForeArm_translateY"
-		,"linearValues[77]","RightForeArm_translateX","linearValues[78]","RightFinger2_translateZ"
-		,"linearValues[79]","LeftShoulder_translateZ","linearValues[7]","RightFinger2_translateY"
-		,"linearValues[80]","RightFinger2_translateX","linearValues[81]","LeftShoulder_translateY"
-		,"linearValues[8]","LeftShoulder_translateX","linearValues[9]"} ;
 select -ne :time1;
 	setAttr ".o" 79;
 	setAttr ".unw" 79;
@@ -42119,7 +41988,6 @@ select -ne :defaultResolution;
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
-select -ne :characterPartition;
 connectAttr ":defaultColorMgtGlobals.cme" "imagePlaneShape1.cme";
 connectAttr ":defaultColorMgtGlobals.cfe" "imagePlaneShape1.cmcf";
 connectAttr ":defaultColorMgtGlobals.cfp" "imagePlaneShape1.cmcp";
@@ -42164,174 +42032,18 @@ connectAttr ":initialShadingGroup.mwc" "polySurfaceShape37.iog.og[0].gco";
 connectAttr "polyMirror10.out" "RightKnee4Shape.i";
 connectAttr "groupId88.id" "RightKnee4Shape.iog.og[0].gid";
 connectAttr ":initialShadingGroup.mwc" "RightKnee4Shape.iog.og[0].gco";
-connectAttr "Robot.av[67]" "UpperSpine1.rz";
-connectAttr "Robot.av[68]" "UpperSpine1.ry";
-connectAttr "Robot.av[69]" "UpperSpine1.rx";
-connectAttr "Robot.lv[67]" "UpperSpine1.tz";
-connectAttr "Robot.lv[68]" "UpperSpine1.ty";
-connectAttr "Robot.lv[69]" "UpperSpine1.tx";
-connectAttr "Robot.av[70]" "RightShoulder.rz";
-connectAttr "Robot.av[71]" "RightShoulder.ry";
-connectAttr "Robot.av[72]" "RightShoulder.rx";
-connectAttr "Robot.lv[70]" "RightShoulder.tz";
-connectAttr "Robot.lv[71]" "RightShoulder.ty";
-connectAttr "Robot.lv[72]" "RightShoulder.tx";
-connectAttr "Robot.av[73]" "RightUpperArm.rz";
-connectAttr "Robot.av[74]" "RightUpperArm.ry";
-connectAttr "Robot.av[75]" "RightUpperArm.rx";
-connectAttr "Robot.lv[73]" "RightUpperArm.tz";
-connectAttr "Robot.lv[74]" "RightUpperArm.ty";
-connectAttr "Robot.lv[75]" "RightUpperArm.tx";
-connectAttr "Robot.av[76]" "RightForeArm.rz";
-connectAttr "Robot.av[77]" "RightForeArm.ry";
-connectAttr "Robot.av[78]" "RightForeArm.rx";
-connectAttr "Robot.lv[76]" "RightForeArm.tz";
-connectAttr "Robot.lv[77]" "RightForeArm.ty";
-connectAttr "Robot.lv[78]" "RightForeArm.tx";
-connectAttr "Robot.av[79]" "RightFinger2.rz";
-connectAttr "Robot.av[80]" "RightFinger2.ry";
-connectAttr "Robot.av[81]" "RightFinger2.rx";
-connectAttr "Robot.lv[79]" "RightFinger2.tz";
-connectAttr "Robot.lv[80]" "RightFinger2.ty";
-connectAttr "Robot.lv[81]" "RightFinger2.tx";
-connectAttr "Robot.av[1]" "RightFinger1.rz";
-connectAttr "Robot.av[2]" "RightFinger1.ry";
-connectAttr "Robot.av[3]" "RightFinger1.rx";
-connectAttr "Robot.lv[1]" "RightFinger1.tz";
-connectAttr "Robot.lv[2]" "RightFinger1.ty";
-connectAttr "Robot.lv[3]" "RightFinger1.tx";
-connectAttr "Robot.av[4]" "RightFinger3.rz";
-connectAttr "Robot.av[5]" "RightFinger3.ry";
-connectAttr "Robot.av[6]" "RightFinger3.rx";
-connectAttr "Robot.lv[4]" "RightFinger3.tz";
-connectAttr "Robot.lv[5]" "RightFinger3.ty";
-connectAttr "Robot.lv[6]" "RightFinger3.tx";
-connectAttr "Robot.av[7]" "LeftShoulder.rz";
-connectAttr "Robot.av[8]" "LeftShoulder.ry";
-connectAttr "Robot.av[9]" "LeftShoulder.rx";
-connectAttr "Robot.lv[7]" "LeftShoulder.tz";
-connectAttr "Robot.lv[8]" "LeftShoulder.ty";
-connectAttr "Robot.lv[9]" "LeftShoulder.tx";
-connectAttr "Robot.av[10]" "LeftUpperArm.rz";
-connectAttr "Robot.av[11]" "LeftUpperArm.ry";
-connectAttr "Robot.av[12]" "LeftUpperArm.rx";
-connectAttr "Robot.lv[10]" "LeftUpperArm.tz";
-connectAttr "Robot.lv[11]" "LeftUpperArm.ty";
-connectAttr "Robot.lv[12]" "LeftUpperArm.tx";
-connectAttr "Robot.av[13]" "LeftForeArm1.rz";
-connectAttr "Robot.av[14]" "LeftForeArm1.ry";
-connectAttr "Robot.av[15]" "LeftForeArm1.rx";
-connectAttr "Robot.lv[13]" "LeftForeArm1.tz";
-connectAttr "Robot.lv[14]" "LeftForeArm1.ty";
-connectAttr "Robot.lv[15]" "LeftForeArm1.tx";
-connectAttr "Robot.av[18]" "LeftFinger2.rx";
-connectAttr "Robot.av[17]" "LeftFinger2.ry";
-connectAttr "Robot.av[16]" "LeftFinger2.rz";
+connectAttr "LeftFinger2_rotateX.o" "LeftFinger2.rx";
+connectAttr "LeftFinger2_rotateY.o" "LeftFinger2.ry";
+connectAttr "LeftFinger2_rotateZ.o" "LeftFinger2.rz";
 connectAttr "LeftFinger2_visibility.o" "LeftFinger2.v";
-connectAttr "Robot.lv[18]" "LeftFinger2.tx";
-connectAttr "Robot.lv[17]" "LeftFinger2.ty";
-connectAttr "Robot.lv[16]" "LeftFinger2.tz";
+connectAttr "LeftFinger2_translateX.o" "LeftFinger2.tx";
+connectAttr "LeftFinger2_translateY.o" "LeftFinger2.ty";
+connectAttr "LeftFinger2_translateZ.o" "LeftFinger2.tz";
 connectAttr "LeftFinger2_scaleX.o" "LeftFinger2.sx";
 connectAttr "LeftFinger2_scaleY.o" "LeftFinger2.sy";
 connectAttr "LeftFinger2_scaleZ.o" "LeftFinger2.sz";
-connectAttr "Robot.av[19]" "LeftFinger1.rz";
-connectAttr "Robot.av[20]" "LeftFinger1.ry";
-connectAttr "Robot.av[21]" "LeftFinger1.rx";
-connectAttr "Robot.lv[19]" "LeftFinger1.tz";
-connectAttr "Robot.lv[20]" "LeftFinger1.ty";
-connectAttr "Robot.lv[21]" "LeftFinger1.tx";
-connectAttr "Robot.av[22]" "LeftFinger3.rz";
-connectAttr "Robot.av[23]" "LeftFinger3.ry";
-connectAttr "Robot.av[24]" "LeftFinger3.rx";
-connectAttr "Robot.lv[22]" "LeftFinger3.tz";
-connectAttr "Robot.lv[23]" "LeftFinger3.ty";
-connectAttr "Robot.lv[24]" "LeftFinger3.tx";
-connectAttr "Robot.av[25]" "MidWaist.rz";
-connectAttr "Robot.av[26]" "MidWaist.ry";
-connectAttr "Robot.av[27]" "MidWaist.rx";
-connectAttr "Robot.lv[25]" "MidWaist.tz";
-connectAttr "Robot.lv[26]" "MidWaist.ty";
-connectAttr "Robot.lv[27]" "MidWaist.tx";
-connectAttr "Robot.av[28]" "Hips1.rz";
-connectAttr "Robot.av[29]" "Hips1.ry";
-connectAttr "Robot.av[30]" "Hips1.rx";
-connectAttr "Robot.lv[28]" "Hips1.tz";
-connectAttr "Robot.lv[29]" "Hips1.ty";
-connectAttr "Robot.lv[30]" "Hips1.tx";
 connectAttr "groupId257.id" "Hips1Shape.iog.og[0].gid";
 connectAttr "HipsSG.mwc" "Hips1Shape.iog.og[0].gco";
-connectAttr "Robot.av[31]" "RightUpperLeg.rz";
-connectAttr "Robot.av[32]" "RightUpperLeg.ry";
-connectAttr "Robot.av[33]" "RightUpperLeg.rx";
-connectAttr "Robot.lv[31]" "RightUpperLeg.tz";
-connectAttr "Robot.lv[32]" "RightUpperLeg.ty";
-connectAttr "Robot.lv[33]" "RightUpperLeg.tx";
-connectAttr "Robot.av[34]" "RightFoot1.rz";
-connectAttr "Robot.av[35]" "RightFoot1.ry";
-connectAttr "Robot.av[36]" "RightFoot1.rx";
-connectAttr "Robot.lv[34]" "RightFoot1.tz";
-connectAttr "Robot.lv[35]" "RightFoot1.ty";
-connectAttr "Robot.lv[36]" "RightFoot1.tx";
-connectAttr "Robot.av[37]" "RightToe1.rz";
-connectAttr "Robot.av[38]" "RightToe1.ry";
-connectAttr "Robot.av[39]" "RightToe1.rx";
-connectAttr "Robot.lv[37]" "RightToe1.tz";
-connectAttr "Robot.lv[38]" "RightToe1.ty";
-connectAttr "Robot.lv[39]" "RightToe1.tx";
-connectAttr "Robot.av[40]" "RightToe2.rz";
-connectAttr "Robot.av[41]" "RightToe2.ry";
-connectAttr "Robot.av[42]" "RightToe2.rx";
-connectAttr "Robot.lv[40]" "RightToe2.tz";
-connectAttr "Robot.lv[41]" "RightToe2.ty";
-connectAttr "Robot.lv[42]" "RightToe2.tx";
-connectAttr "Robot.av[43]" "RightToe3.rz";
-connectAttr "Robot.av[44]" "RightToe3.ry";
-connectAttr "Robot.av[45]" "RightToe3.rx";
-connectAttr "Robot.lv[43]" "RightToe3.tz";
-connectAttr "Robot.lv[44]" "RightToe3.ty";
-connectAttr "Robot.lv[45]" "RightToe3.tx";
-connectAttr "Robot.av[46]" "polySurface143.rz";
-connectAttr "Robot.av[47]" "polySurface143.ry";
-connectAttr "Robot.av[48]" "polySurface143.rx";
-connectAttr "Robot.lv[46]" "polySurface143.tz";
-connectAttr "Robot.lv[47]" "polySurface143.ty";
-connectAttr "Robot.lv[48]" "polySurface143.tx";
-connectAttr "Robot.av[49]" "UpperLeftLeg.rz";
-connectAttr "Robot.av[50]" "UpperLeftLeg.ry";
-connectAttr "Robot.av[51]" "UpperLeftLeg.rx";
-connectAttr "Robot.lv[49]" "UpperLeftLeg.tz";
-connectAttr "Robot.lv[50]" "UpperLeftLeg.ty";
-connectAttr "Robot.lv[51]" "UpperLeftLeg.tx";
-connectAttr "Robot.av[52]" "LeftFoot3.rz";
-connectAttr "Robot.av[53]" "LeftFoot3.ry";
-connectAttr "Robot.av[54]" "LeftFoot3.rx";
-connectAttr "Robot.lv[52]" "LeftFoot3.tz";
-connectAttr "Robot.lv[53]" "LeftFoot3.ty";
-connectAttr "Robot.lv[54]" "LeftFoot3.tx";
-connectAttr "Robot.av[55]" "LeftToe1.rz";
-connectAttr "Robot.av[56]" "LeftToe1.ry";
-connectAttr "Robot.av[57]" "LeftToe1.rx";
-connectAttr "Robot.lv[55]" "LeftToe1.tz";
-connectAttr "Robot.lv[56]" "LeftToe1.ty";
-connectAttr "Robot.lv[57]" "LeftToe1.tx";
-connectAttr "Robot.av[58]" "LeftToe2.rz";
-connectAttr "Robot.av[59]" "LeftToe2.ry";
-connectAttr "Robot.av[60]" "LeftToe2.rx";
-connectAttr "Robot.lv[58]" "LeftToe2.tz";
-connectAttr "Robot.lv[59]" "LeftToe2.ty";
-connectAttr "Robot.lv[60]" "LeftToe2.tx";
-connectAttr "Robot.av[61]" "LeftToe3.rz";
-connectAttr "Robot.av[62]" "LeftToe3.ry";
-connectAttr "Robot.av[63]" "LeftToe3.rx";
-connectAttr "Robot.lv[61]" "LeftToe3.tz";
-connectAttr "Robot.lv[62]" "LeftToe3.ty";
-connectAttr "Robot.lv[63]" "LeftToe3.tx";
-connectAttr "Robot.av[64]" "RearLeftToe1.rz";
-connectAttr "Robot.av[65]" "RearLeftToe1.ry";
-connectAttr "Robot.av[66]" "RearLeftToe1.rx";
-connectAttr "Robot.lv[64]" "RearLeftToe1.tz";
-connectAttr "Robot.lv[65]" "RearLeftToe1.ty";
-connectAttr "Robot.lv[66]" "RearLeftToe1.tx";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" "HipsSG.message" ":defaultLightSet.message";
@@ -42929,174 +42641,6 @@ connectAttr "RearRightToeMaterial.oc" "RearRightToeSG.ss";
 connectAttr "RearRightToe1.iog" "RearRightToeSG.dsm" -na;
 connectAttr "RearRightToeSG.msg" "materialInfo27.sg";
 connectAttr "RearRightToeMaterial.msg" "materialInfo27.m";
-connectAttr "RightFinger1.rz" "Robot.dnsm[0]";
-connectAttr "RightFinger1.ry" "Robot.dnsm[1]";
-connectAttr "RightFinger1.rx" "Robot.dnsm[2]";
-connectAttr "RightFinger1.tz" "Robot.dnsm[3]";
-connectAttr "RightFinger1.ty" "Robot.dnsm[4]";
-connectAttr "RightFinger1.tx" "Robot.dnsm[5]";
-connectAttr "RightFinger3.rz" "Robot.dnsm[6]";
-connectAttr "RightFinger3.ry" "Robot.dnsm[7]";
-connectAttr "RightFinger3.rx" "Robot.dnsm[8]";
-connectAttr "RightFinger3.tz" "Robot.dnsm[9]";
-connectAttr "RightFinger3.ty" "Robot.dnsm[10]";
-connectAttr "RightFinger3.tx" "Robot.dnsm[11]";
-connectAttr "LeftShoulder.rz" "Robot.dnsm[12]";
-connectAttr "LeftShoulder.ry" "Robot.dnsm[13]";
-connectAttr "LeftShoulder.rx" "Robot.dnsm[14]";
-connectAttr "LeftShoulder.tz" "Robot.dnsm[15]";
-connectAttr "LeftShoulder.ty" "Robot.dnsm[16]";
-connectAttr "LeftShoulder.tx" "Robot.dnsm[17]";
-connectAttr "LeftUpperArm.rz" "Robot.dnsm[18]";
-connectAttr "LeftUpperArm.ry" "Robot.dnsm[19]";
-connectAttr "LeftUpperArm.rx" "Robot.dnsm[20]";
-connectAttr "LeftUpperArm.tz" "Robot.dnsm[21]";
-connectAttr "LeftUpperArm.ty" "Robot.dnsm[22]";
-connectAttr "LeftUpperArm.tx" "Robot.dnsm[23]";
-connectAttr "LeftForeArm1.rz" "Robot.dnsm[24]";
-connectAttr "LeftForeArm1.ry" "Robot.dnsm[25]";
-connectAttr "LeftForeArm1.rx" "Robot.dnsm[26]";
-connectAttr "LeftForeArm1.tz" "Robot.dnsm[27]";
-connectAttr "LeftForeArm1.ty" "Robot.dnsm[28]";
-connectAttr "LeftForeArm1.tx" "Robot.dnsm[29]";
-connectAttr "LeftFinger2.rz" "Robot.dnsm[30]";
-connectAttr "LeftFinger2.ry" "Robot.dnsm[31]";
-connectAttr "LeftFinger2.rx" "Robot.dnsm[32]";
-connectAttr "LeftFinger2.tz" "Robot.dnsm[33]";
-connectAttr "LeftFinger2.ty" "Robot.dnsm[34]";
-connectAttr "LeftFinger2.tx" "Robot.dnsm[35]";
-connectAttr "LeftFinger1.rz" "Robot.dnsm[36]";
-connectAttr "LeftFinger1.ry" "Robot.dnsm[37]";
-connectAttr "LeftFinger1.rx" "Robot.dnsm[38]";
-connectAttr "LeftFinger1.tz" "Robot.dnsm[39]";
-connectAttr "LeftFinger1.ty" "Robot.dnsm[40]";
-connectAttr "LeftFinger1.tx" "Robot.dnsm[41]";
-connectAttr "LeftFinger3.rz" "Robot.dnsm[42]";
-connectAttr "LeftFinger3.ry" "Robot.dnsm[43]";
-connectAttr "LeftFinger3.rx" "Robot.dnsm[44]";
-connectAttr "LeftFinger3.tz" "Robot.dnsm[45]";
-connectAttr "LeftFinger3.ty" "Robot.dnsm[46]";
-connectAttr "LeftFinger3.tx" "Robot.dnsm[47]";
-connectAttr "MidWaist.rz" "Robot.dnsm[48]";
-connectAttr "MidWaist.ry" "Robot.dnsm[49]";
-connectAttr "MidWaist.rx" "Robot.dnsm[50]";
-connectAttr "MidWaist.tz" "Robot.dnsm[51]";
-connectAttr "MidWaist.ty" "Robot.dnsm[52]";
-connectAttr "MidWaist.tx" "Robot.dnsm[53]";
-connectAttr "Hips1.rz" "Robot.dnsm[54]";
-connectAttr "Hips1.ry" "Robot.dnsm[55]";
-connectAttr "Hips1.rx" "Robot.dnsm[56]";
-connectAttr "Hips1.tz" "Robot.dnsm[57]";
-connectAttr "Hips1.ty" "Robot.dnsm[58]";
-connectAttr "Hips1.tx" "Robot.dnsm[59]";
-connectAttr "RightUpperLeg.rz" "Robot.dnsm[60]";
-connectAttr "RightUpperLeg.ry" "Robot.dnsm[61]";
-connectAttr "RightUpperLeg.rx" "Robot.dnsm[62]";
-connectAttr "RightUpperLeg.tz" "Robot.dnsm[63]";
-connectAttr "RightUpperLeg.ty" "Robot.dnsm[64]";
-connectAttr "RightUpperLeg.tx" "Robot.dnsm[65]";
-connectAttr "RightFoot1.rz" "Robot.dnsm[66]";
-connectAttr "RightFoot1.ry" "Robot.dnsm[67]";
-connectAttr "RightFoot1.rx" "Robot.dnsm[68]";
-connectAttr "RightFoot1.tz" "Robot.dnsm[69]";
-connectAttr "RightFoot1.ty" "Robot.dnsm[70]";
-connectAttr "RightFoot1.tx" "Robot.dnsm[71]";
-connectAttr "RightToe1.rz" "Robot.dnsm[72]";
-connectAttr "RightToe1.ry" "Robot.dnsm[73]";
-connectAttr "RightToe1.rx" "Robot.dnsm[74]";
-connectAttr "RightToe1.tz" "Robot.dnsm[75]";
-connectAttr "RightToe1.ty" "Robot.dnsm[76]";
-connectAttr "RightToe1.tx" "Robot.dnsm[77]";
-connectAttr "RightToe2.rz" "Robot.dnsm[78]";
-connectAttr "RightToe2.ry" "Robot.dnsm[79]";
-connectAttr "RightToe2.rx" "Robot.dnsm[80]";
-connectAttr "RightToe2.tz" "Robot.dnsm[81]";
-connectAttr "RightToe2.ty" "Robot.dnsm[82]";
-connectAttr "RightToe2.tx" "Robot.dnsm[83]";
-connectAttr "RightToe3.rz" "Robot.dnsm[84]";
-connectAttr "RightToe3.ry" "Robot.dnsm[85]";
-connectAttr "RightToe3.rx" "Robot.dnsm[86]";
-connectAttr "RightToe3.tz" "Robot.dnsm[87]";
-connectAttr "RightToe3.ty" "Robot.dnsm[88]";
-connectAttr "RightToe3.tx" "Robot.dnsm[89]";
-connectAttr "polySurface143.rz" "Robot.dnsm[90]";
-connectAttr "polySurface143.ry" "Robot.dnsm[91]";
-connectAttr "polySurface143.rx" "Robot.dnsm[92]";
-connectAttr "polySurface143.tz" "Robot.dnsm[93]";
-connectAttr "polySurface143.ty" "Robot.dnsm[94]";
-connectAttr "polySurface143.tx" "Robot.dnsm[95]";
-connectAttr "UpperLeftLeg.rz" "Robot.dnsm[96]";
-connectAttr "UpperLeftLeg.ry" "Robot.dnsm[97]";
-connectAttr "UpperLeftLeg.rx" "Robot.dnsm[98]";
-connectAttr "UpperLeftLeg.tz" "Robot.dnsm[99]";
-connectAttr "UpperLeftLeg.ty" "Robot.dnsm[100]";
-connectAttr "UpperLeftLeg.tx" "Robot.dnsm[101]";
-connectAttr "LeftFoot3.rz" "Robot.dnsm[102]";
-connectAttr "LeftFoot3.ry" "Robot.dnsm[103]";
-connectAttr "LeftFoot3.rx" "Robot.dnsm[104]";
-connectAttr "LeftFoot3.tz" "Robot.dnsm[105]";
-connectAttr "LeftFoot3.ty" "Robot.dnsm[106]";
-connectAttr "LeftFoot3.tx" "Robot.dnsm[107]";
-connectAttr "LeftToe1.rz" "Robot.dnsm[108]";
-connectAttr "LeftToe1.ry" "Robot.dnsm[109]";
-connectAttr "LeftToe1.rx" "Robot.dnsm[110]";
-connectAttr "LeftToe1.tz" "Robot.dnsm[111]";
-connectAttr "LeftToe1.ty" "Robot.dnsm[112]";
-connectAttr "LeftToe1.tx" "Robot.dnsm[113]";
-connectAttr "LeftToe2.rz" "Robot.dnsm[114]";
-connectAttr "LeftToe2.ry" "Robot.dnsm[115]";
-connectAttr "LeftToe2.rx" "Robot.dnsm[116]";
-connectAttr "LeftToe2.tz" "Robot.dnsm[117]";
-connectAttr "LeftToe2.ty" "Robot.dnsm[118]";
-connectAttr "LeftToe2.tx" "Robot.dnsm[119]";
-connectAttr "LeftToe3.rz" "Robot.dnsm[120]";
-connectAttr "LeftToe3.ry" "Robot.dnsm[121]";
-connectAttr "LeftToe3.rx" "Robot.dnsm[122]";
-connectAttr "LeftToe3.tz" "Robot.dnsm[123]";
-connectAttr "LeftToe3.ty" "Robot.dnsm[124]";
-connectAttr "LeftToe3.tx" "Robot.dnsm[125]";
-connectAttr "RearLeftToe1.rz" "Robot.dnsm[126]";
-connectAttr "RearLeftToe1.ry" "Robot.dnsm[127]";
-connectAttr "RearLeftToe1.rx" "Robot.dnsm[128]";
-connectAttr "RearLeftToe1.tz" "Robot.dnsm[129]";
-connectAttr "RearLeftToe1.ty" "Robot.dnsm[130]";
-connectAttr "RearLeftToe1.tx" "Robot.dnsm[131]";
-connectAttr "UpperSpine1.rz" "Robot.dnsm[132]";
-connectAttr "UpperSpine1.ry" "Robot.dnsm[133]";
-connectAttr "UpperSpine1.rx" "Robot.dnsm[134]";
-connectAttr "UpperSpine1.tz" "Robot.dnsm[135]";
-connectAttr "UpperSpine1.ty" "Robot.dnsm[136]";
-connectAttr "UpperSpine1.tx" "Robot.dnsm[137]";
-connectAttr "RightShoulder.rz" "Robot.dnsm[138]";
-connectAttr "RightShoulder.ry" "Robot.dnsm[139]";
-connectAttr "RightShoulder.rx" "Robot.dnsm[140]";
-connectAttr "RightShoulder.tz" "Robot.dnsm[141]";
-connectAttr "RightShoulder.ty" "Robot.dnsm[142]";
-connectAttr "RightShoulder.tx" "Robot.dnsm[143]";
-connectAttr "RightUpperArm.rz" "Robot.dnsm[144]";
-connectAttr "RightUpperArm.ry" "Robot.dnsm[145]";
-connectAttr "RightUpperArm.rx" "Robot.dnsm[146]";
-connectAttr "RightUpperArm.tz" "Robot.dnsm[147]";
-connectAttr "RightUpperArm.ty" "Robot.dnsm[148]";
-connectAttr "RightUpperArm.tx" "Robot.dnsm[149]";
-connectAttr "RightForeArm.rz" "Robot.dnsm[150]";
-connectAttr "RightForeArm.ry" "Robot.dnsm[151]";
-connectAttr "RightForeArm.rx" "Robot.dnsm[152]";
-connectAttr "RightForeArm.tz" "Robot.dnsm[153]";
-connectAttr "RightForeArm.ty" "Robot.dnsm[154]";
-connectAttr "RightForeArm.tx" "Robot.dnsm[155]";
-connectAttr "RightFinger2.rz" "Robot.dnsm[156]";
-connectAttr "RightFinger2.ry" "Robot.dnsm[157]";
-connectAttr "RightFinger2.rx" "Robot.dnsm[158]";
-connectAttr "RightFinger2.tz" "Robot.dnsm[159]";
-connectAttr "RightFinger2.ty" "Robot.dnsm[160]";
-connectAttr "RightFinger2.tx" "Robot.dnsm[161]";
-connectAttr "LeftFinger2_rotateZ.o" "Robot.av[16]";
-connectAttr "LeftFinger2_rotateY.o" "Robot.av[17]";
-connectAttr "LeftFinger2_rotateX.o" "Robot.av[18]";
-connectAttr "LeftFinger2_translateZ.o" "Robot.lv[16]";
-connectAttr "LeftFinger2_translateY.o" "Robot.lv[17]";
-connectAttr "LeftFinger2_translateX.o" "Robot.lv[18]";
 connectAttr "HipsSG.pa" ":renderPartition.st" -na;
 connectAttr "LumbarSG.pa" ":renderPartition.st" -na;
 connectAttr "TorsoSG.pa" ":renderPartition.st" -na;
@@ -43182,5 +42726,4 @@ connectAttr "groupId87.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId88.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId95.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId96.msg" ":initialShadingGroup.gn" -na;
-connectAttr "Robot.pa" ":characterPartition.st" -na;
 // End of Robot.ma
